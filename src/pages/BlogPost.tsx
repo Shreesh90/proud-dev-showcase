@@ -1,6 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import Header from "../components/Header";
 import { blogPosts } from "../data/blogPosts";
 
@@ -46,34 +48,11 @@ const BlogPost = () => {
               day: "numeric",
             })}
           </span>
-          <h1 className="text-3xl font-semibold tracking-tight">{post.title}</h1>
 
-          <article className="mt-8 prose-custom">
-            {post.content.split("\n").map((line, i) => {
-              const trimmed = line.trim();
-              if (!trimmed) return <br key={i} />;
-              if (trimmed.startsWith("## "))
-                return (
-                  <h2 key={i} className="text-lg font-semibold mt-8 mb-3 text-foreground">
-                    {trimmed.slice(3)}
-                  </h2>
-                );
-              if (trimmed.startsWith("---"))
-                return <hr key={i} className="my-8 border-border" />;
-              if (trimmed.startsWith("```"))
-                return null;
-              if (trimmed.startsWith("1. ") || trimmed.startsWith("2. ") || trimmed.startsWith("3. ") || trimmed.startsWith("4. "))
-                return (
-                  <p key={i} className="text-sm text-muted-foreground leading-relaxed ml-4 my-1">
-                    {trimmed}
-                  </p>
-                );
-              return (
-                <p key={i} className="text-sm text-muted-foreground leading-relaxed my-3">
-                  {trimmed}
-                </p>
-              );
-            })}
+          <article className="prose-blog">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {post.content}
+            </ReactMarkdown>
           </article>
         </motion.div>
       </main>

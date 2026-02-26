@@ -93,3 +93,53 @@
     font-family: var(--font-mono);
   }
 }
+
+/* Blog markdown styles */
+.prose-blog h1 {
+  @apply text-3xl font-semibold tracking-tight text-foreground mb-4;
+}
+.prose-blog h2 {
+  @apply text-lg font-semibold mt-8 mb-3 text-foreground;
+}
+.prose-blog h3 {
+  @apply text-base font-semibold mt-6 mb-2 text-foreground;
+}
+.prose-blog p {
+  @apply text-sm text-muted-foreground leading-relaxed my-3;
+}
+.prose-blog hr {
+  @apply my-8 border-border;
+}
+.prose-blog ul, .prose-blog ol {
+  @apply text-sm text-muted-foreground leading-relaxed ml-4 my-3 space-y-1;
+}
+.prose-blog ol {
+  @apply list-decimal;
+}
+.prose-blog ul {
+  @apply list-disc;
+}
+.prose-blog li {
+  @apply pl-1;
+}
+.prose-blog strong {
+  @apply text-foreground font-medium;
+}
+.prose-blog em {
+  @apply italic;
+}
+.prose-blog code {
+  @apply font-mono text-xs bg-secondary px-1.5 py-0.5 rounded-sm;
+}
+.prose-blog pre {
+  @apply bg-secondary rounded-sm p-4 my-4 overflow-x-auto;
+}
+.prose-blog pre code {
+  @apply bg-transparent p-0;
+}
+.prose-blog a {
+  @apply text-accent hover:underline;
+}
+.prose-blog blockquote {
+  @apply border-l-2 border-border pl-4 my-4 italic text-muted-foreground;
+}
