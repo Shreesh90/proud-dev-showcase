@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const location = useLocation();
@@ -15,23 +16,26 @@ const Header = () => {
         <Link to="/" className="font-mono text-sm font-semibold tracking-tight">
           ~/your-name
         </Link>
-        <nav className="flex gap-6">
-          {links.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className="relative text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {link.label}
-              {location.pathname === link.to && (
-                <motion.div
-                  layoutId="nav-underline"
-                  className="absolute -bottom-1 left-0 right-0 h-px bg-foreground"
-                />
-              )}
-            </Link>
-          ))}
-        </nav>
+        <div className="flex items-center gap-4">
+          <nav className="flex gap-6">
+            {links.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="relative text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+                {location.pathname === link.to && (
+                  <motion.div
+                    layoutId="nav-underline"
+                    className="absolute -bottom-1 left-0 right-0 h-px bg-foreground"
+                  />
+                )}
+              </Link>
+            ))}
+          </nav>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );
