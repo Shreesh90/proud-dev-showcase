@@ -50,9 +50,9 @@ const Index = () => {
         </motion.section>
 
         <div className="h-px bg-border" />
-        <ProjectsSection />
-        <div className="h-px bg-border" />
         <ExperienceSection />
+        <div className="h-px bg-border" />
+        <ProjectsSection />
         <div className="h-px bg-border" />
         <EducationSection />
       </main>
