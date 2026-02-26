@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Header from "../components/Header";
 import ProjectsSection from "../components/ProjectsSection";
 import ExperienceSection from "../components/ExperienceSection";
+import CertificationsSection from "../components/CertificationsSection";
 import EducationSection from "../components/EducationSection";
 
 const Index = () => {
@@ -53,6 +54,8 @@ const Index = () => {
         <ExperienceSection />
         <div className="h-px bg-border" />
         <ProjectsSection />
+        <div className="h-px bg-border" />
+        <CertificationsSection />
         <div className="h-px bg-border" />
         <EducationSection />
       </main>
