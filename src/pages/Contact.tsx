@@ -40,7 +40,7 @@ const Contact = () => {
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="Your name"
+                placeholder="Shreesh Swaraj"
                 required
                 maxLength={100}
               />

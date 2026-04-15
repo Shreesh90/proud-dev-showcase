@@ -21,17 +21,15 @@ const Index = () => {
           className="py-16"
         >
           <h1 className="text-3xl font-semibold tracking-tight">
-            Your Name
+            Shreesh Swaraj
           </h1>
           <p className="text-muted-foreground mt-3 max-w-lg leading-relaxed">
-            Software engineer focused on building reliable systems and clean
-            interfaces. I write code that lasts and occasionally write about it
-            too.
+            Backend-focused Software Engineer with 3+ years of experience building data ingestion and processing platform services.
           </p>
           <div className="flex gap-4 mt-5">
             <a
               href="https://github.com"
-              target="_blank"
+              target="https://github.com/Shreesh90"
               rel="noopener noreferrer"
               className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
@@ -39,23 +37,31 @@ const Index = () => {
             </a>
             <a
               href="https://linkedin.com"
-              target="_blank"
+              target="https://www.linkedin.com/in/shreeswa/"
               rel="noopener noreferrer"
               className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
               linkedin
             </a>
             <a
-              href="mailto:you@email.com"
+              href="mailto:shreesh.swaraj300@gmail.com"
               className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
               email
             </a>
+            <a
+              href="https://leetcode.com"
+              target="https://leetcode.com/u/raj2544/"
+              rel="noopener noreferrer"
+              className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              leetcode
+            </a>
           </div>
         </motion.section>
 
-        <div className="h-px bg-border" />
-        <StatsSection />
+        {/* <div className="h-px bg-border" />
+        <StatsSection /> */}
         <div className="h-px bg-border" />
         <ExperienceSection />
         <div className="h-px bg-border" />
@@ -66,8 +72,8 @@ const Index = () => {
         <CertificationsSection />
         <div className="h-px bg-border" />
         <EducationSection />
-        <div className="h-px bg-border" />
-        <TestimonialsSection />
+        {/* <div className="h-px bg-border" />
+        <TestimonialsSection /> */}
         <div className="h-px bg-border" />
         <CTASection />
       </main>

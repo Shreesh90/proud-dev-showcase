@@ -4,11 +4,11 @@ import { useState } from "react";
 const skillCategories = [
   {
     category: "Languages",
-    skills: ["TypeScript", "JavaScript", "Python", "Go", "Rust"],
+    skills: ["C++", "Java"],
   },
   {
     category: "Frontend",
-    skills: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
+    skills: ["React", "JS"],
   },
   {
     category: "Backend",

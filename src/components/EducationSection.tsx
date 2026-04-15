@@ -1,15 +1,18 @@
 import { motion } from "framer-motion";
 
-const education = [
+interface Education {
+  degree: string;
+  school: string;
+  period: string;
+  cgpa?: string;
+}
+
+const education: Education[] = [
   {
-    degree: "M.S. Computer Science",
-    school: "University of Technology",
-    period: "2016 — 2018",
-  },
-  {
-    degree: "B.S. Computer Science",
-    school: "State University",
-    period: "2012 — 2016",
+    degree: "B.Tech. Information Technology",
+    school: "Indian Institute of Information Technology, Allahabad",
+    period: "2019 — 2023",
+    cgpa: "8.41"
   },
 ];
 
@@ -35,6 +38,11 @@ const EducationSection = () => {
             <div>
               <h3 className="font-medium text-foreground">{edu.degree}</h3>
               <p className="text-sm text-muted-foreground">{edu.school}</p>
+              {edu.cgpa && (
+                <p className="text-sm text-muted-foreground mt-1">
+                  <span className="font-medium">CGPA:</span> {edu.cgpa}
+                </p>
+              )}
             </div>
           </motion.div>
         ))}

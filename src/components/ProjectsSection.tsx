@@ -4,25 +4,34 @@ import { useState } from "react";
 
 const projects = [
   {
-    title: "Project Alpha",
-    description: "A high-performance CLI tool for managing cloud infrastructure deployments.",
-    detail: "Project Alpha streamlines cloud infrastructure management through an intuitive CLI interface. Built with Go for maximum performance, it integrates directly with AWS services and Terraform configurations to automate deployment pipelines, manage environment variables, and handle rollbacks gracefully.",
-    tech: ["Go", "AWS", "Terraform"],
-    link: "#",
+    title: "Raas Medical Healthcare",
+    description: "A common health platform for doctors and patients to access medical records benefitting analysis from ML models",
+    detail: [
+      "Designed and built a web platform integrating Machine Learning models for medical text and imagery data. Enabled clinicians to upload cases and receive automated triage predictions.",
+      "Implemented end-to-end integration between a Node.js REST API and a Django ML server using ExpressJS, Django REST Framework, Firebase, MongoDB, and TensorFlow.",
+      "Trained and deployed Logistic Regression, Random Forest and Residual U-Net models. Validation accuracy >80% on developed datasets."
+    ],
+    tech: ["ExpressJS", "Django REST", "Firebase", "MongoDB", "TensorFlow"],
+    link: "https://github.com/Shreesh90/RAaS-IIT2019044",
   },
   {
-    title: "DataViz Engine",
-    description: "Real-time data visualization library built for large-scale datasets.",
-    detail: "DataViz Engine is a high-performance visualization library capable of rendering millions of data points in real-time. It leverages WebGL for GPU-accelerated rendering and provides a declarative API built on top of D3.js for intuitive chart composition and interaction handling.",
-    tech: ["TypeScript", "D3.js", "WebGL"],
-    link: "#",
+    title: "Anti Spoof Facial Recognition",
+    description: "An anti-spoof facial recognition system",
+    detail: [
+      "Developed an anti-spoof facial recognition system using OpenCV and TensorFlow. Detected facial and eye movement cues and validated authenticity via randomized gesture checks.",
+      "Achieved ∼ 90% accuracy for spoof free identification on validation data through model tuning and gesture based verification."
+    ],
+    tech: ["Python", "OpenCV"],
+    link: "https://github.com/Shreesh90/Anti-Spoof-Facial-Recognition",
   },
   {
-    title: "Auth Microservice",
-    description: "Lightweight authentication service with JWT and OAuth2 support.",
-    detail: "A production-ready authentication microservice written in Rust for minimal memory footprint and maximum throughput. Supports JWT token issuance and validation, OAuth2 flows with multiple providers, rate limiting, and secure session management backed by PostgreSQL.",
-    tech: ["Rust", "PostgreSQL", "Docker"],
-    link: "#",
+    title: "Inclusivo",
+    description: "An online DEI-focused hiring platform for the LGBTQIA+ community",
+    detail: [
+      "Built job and story listing pages for an LGBTQIA+ hiring platform. Project shortlisted in the Top 50 global solutions at the Google Solution Challenge 2021."
+    ],
+    tech: ["ReactJS", "Python", "Django", "Firebase"],
+    link: "https://inclusivo.netlify.app/",
   },
 ];
 
@@ -101,9 +110,11 @@ const ProjectsSection = () => {
                 </button>
               </div>
 
-              <p className="text-sm text-muted-foreground mt-4 leading-relaxed">
-                {projects[selected].detail}
-              </p>
+              <ul className="text-sm text-muted-foreground mt-4 leading-relaxed list-disc ml-4 space-y-2">
+                {projects[selected].detail.map((point, j) => (
+                  <li key={j}>{point}</li>
+                ))}
+              </ul>
 
               <div className="flex gap-2 mt-5 flex-wrap">
                 {projects[selected].tech.map((t) => (
@@ -118,7 +129,7 @@ const ProjectsSection = () => {
 
               <a
                 href={projects[selected].link}
-                target="_blank"
+                target={projects[selected].link}
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-6 px-4 py-2 bg-foreground text-background font-mono text-xs rounded-sm hover:bg-foreground/90 transition-colors"
               >
