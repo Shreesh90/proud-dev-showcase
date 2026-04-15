@@ -4,6 +4,10 @@ import ProjectsSection from "../components/ProjectsSection";
 import ExperienceSection from "../components/ExperienceSection";
 import CertificationsSection from "../components/CertificationsSection";
 import EducationSection from "../components/EducationSection";
+import StatsSection from "../components/StatsSection";
+import SkillsSection from "../components/SkillsSection";
+import TestimonialsSection from "../components/TestimonialsSection";
+import CTASection from "../components/CTASection";
 
 const Index = () => {
   return (
@@ -51,13 +55,21 @@ const Index = () => {
         </motion.section>
 
         <div className="h-px bg-border" />
+        <StatsSection />
+        <div className="h-px bg-border" />
         <ExperienceSection />
         <div className="h-px bg-border" />
         <ProjectsSection />
         <div className="h-px bg-border" />
+        <SkillsSection />
+        <div className="h-px bg-border" />
         <CertificationsSection />
         <div className="h-px bg-border" />
         <EducationSection />
+        <div className="h-px bg-border" />
+        <TestimonialsSection />
+        <div className="h-px bg-border" />
+        <CTASection />
       </main>
     </>
   );
