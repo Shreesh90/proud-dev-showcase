@@ -82,11 +82,11 @@ const ProjectsSection = () => {
               onClick={() => setSelected(null)}
             />
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              initial={{ opacity: 0, scale: 0.95, x: "-50%", y: "-45%" }}
+              animate={{ opacity: 1, scale: 1, x: "-50%", y: "-50%" }}
+              exit={{ opacity: 0, scale: 0.95, x: "-50%", y: "-45%" }}
               transition={{ duration: 0.25 }}
-              className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-lg z-50 bg-card border border-border rounded-sm p-6 overflow-y-auto max-h-[90vh]"
+              className="fixed left-1/2 top-1/2 w-[calc(100%-2rem)] max-w-lg z-50 bg-card border border-border rounded-sm p-6 overflow-y-auto max-h-[90vh]"
             >
               <div className="flex items-start justify-between gap-4">
                 <h3 className="text-lg font-semibold text-foreground">
